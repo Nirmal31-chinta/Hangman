@@ -41,7 +41,7 @@ int main() {
     
     char guessed_word[20];
     char guessed_letters[26];
-    int tries, correct_guesses, word_length, score;
+    int tries, correct_guesses, word_length;
     char guess[3];  
     int found;
     char play_again;
@@ -49,7 +49,6 @@ int main() {
     do {
         tries = 0;
         correct_guesses = 0;
-        score = 0;
 
         int random_index = rand() % WORD_COUNT;
         const char *secret_word = words[random_index];
@@ -97,7 +96,6 @@ int main() {
                     guessed_word[i] = guess[0];
                     found = 1;
                     correct_guesses++;
-                    score++; // Increment score for each correct guess
                 }
             }
 
@@ -109,11 +107,9 @@ int main() {
 
         if (correct_guesses == word_length) {
             printf("Congratulations! You've guessed the word: %s\n", secret_word);
-            printf("Your score for this game: %d\n", score);
         } else {
             display_hangman(tries);
             printf("You've run out of tries! The word was: %s\n", secret_word);
-            printf("Your score for this game: %d\n", score);
         }
 
         // Ask if the player wants to play again
