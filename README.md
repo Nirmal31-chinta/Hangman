@@ -1,4 +1,4 @@
-PDS project
+Project
 Topic: Hangman
 Project Incharge: Dr. Devashree Tripathy
 Members Of the Project:NIRMALA CHINTA (24ME01064), MARPU DIVIJA (24CE01055)
